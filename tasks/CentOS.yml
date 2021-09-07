@@ -1,0 +1,9 @@
+---
+- name: Install knot-resolver-release
+  yum:
+    name: https://secure.nic.cz/files/knot-resolver/knot-resolver-release.el.rpm
+    disable_gpg_check: yes
+
+- name: Install knot-resolver
+  yum:
+    name: knot-resolver
