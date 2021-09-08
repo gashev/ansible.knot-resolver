@@ -1,2 +1,8 @@
 ---
 - include_tasks: "{{ ansible_distribution }}.yml"
+
+- name: Start kresd@1.service
+  ansible.builtin.service:
+    name: kresd@1.service
+    state: started
+    enabled: yes
