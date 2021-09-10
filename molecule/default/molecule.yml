@@ -22,6 +22,12 @@ platforms:
     pre_build_image: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  - name: fedora-34
+    image: localhost/systemd:fedora-34
+    command: /usr/sbin/init
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
 provisioner:
   name: ansible
