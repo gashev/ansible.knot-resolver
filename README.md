@@ -1,4 +1,4 @@
-# ansible.knot-resolver
+# knot-resolver
 knot-resolver ansible role
 
 ## Examples of playbooks
