@@ -1,0 +1,5 @@
+---
+- name: Restart knot-resolver service
+  service:
+    name: "kresd@1.service"
+    state: restarted

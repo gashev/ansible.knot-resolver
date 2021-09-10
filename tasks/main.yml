@@ -1,6 +1,14 @@
 ---
 - include_tasks: "{{ ansible_distribution }}.yml"
 
+- name: Configure
+  template:
+    src: kresd.conf
+    dest: /etc/knot-resolver/kresd.conf
+    mode: 0644
+  notify:
+    - Restart knot-resolver service
+
 - name: Start kresd@1.service
   ansible.builtin.service:
     name: kresd@1.service

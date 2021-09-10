@@ -1,0 +1,21 @@
+knot_resolver:
+  net:
+    listen:
+      - addresses: "'127.0.0.1'"
+        port: 53
+        flags: "kind='dns'"
+      - addresses: "'127.0.0.1'"
+        port: 853
+        flags: "kind='tls'"
+      - addresses: "'::1'"
+        port: 53
+        flags: "kind='dns',freebind=true"
+      - addresses: "'::1'"
+        port: 853
+        flags: "kind='tls',freebind=true"
+  modules:
+    - name: 'hints > iterate'
+    - name: 'stats'
+    - name: 'predict'
+  cache:
+    size: '100 * MB'
