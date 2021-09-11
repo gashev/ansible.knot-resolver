@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include ansible.knot-resolver"
+    - name: "Include knot-resolver"
       include_role:
         name: "knot-resolver"
