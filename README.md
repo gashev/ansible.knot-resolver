@@ -21,5 +21,5 @@ knot-resolver ansible role
             size: '100 * MB'
 
       roles:
-        - ansible.knot-resolver
+        - knot-resolver
 
