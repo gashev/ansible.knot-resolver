@@ -4,4 +4,4 @@
   tasks:
     - name: "Include ansible.knot-resolver"
       include_role:
-        name: "ansible.knot-resolver"
+        name: "knot-resolver"
