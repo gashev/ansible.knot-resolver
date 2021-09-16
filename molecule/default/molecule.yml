@@ -34,6 +34,12 @@ platforms:
     pre_build_image: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  - name: ubuntu-hirsute
+    image: localhost/systemd:ubuntu-hirsute
+    command: /lib/systemd/systemd
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
  
 provisioner:
   name: ansible
