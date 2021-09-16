@@ -1,11 +1,11 @@
 ---
+- name: Install ca-certificates
+  apt:
+    name: ca-certificates
+
 - name: Install knot-resolver-release
   apt:
     deb: https://secure.nic.cz/files/knot-resolver/knot-resolver-release.deb
-
-- name: Run apt update
-  apt:
-    update_cache: yes
 
 - name: Install knot-resolver
   apt:

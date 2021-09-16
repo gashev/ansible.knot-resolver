@@ -16,6 +16,12 @@ platforms:
     pre_build_image: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  - name: debian-10
+    image: localhost/systemd-python:debian-10
+    command: /lib/systemd/systemd
+    pre_build_image: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
   - name: debian-11
     image: localhost/systemd-python3:debian-11
     command: /lib/systemd/systemd
