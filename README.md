@@ -23,3 +23,27 @@ knot-resolver ansible role
       roles:
         - knot-resolver
 
+
+    ---
+    - hosts: all
+      vars:
+        knot_resolver:
+          net:
+            ipv6: false
+            listen:
+             - addresses: "net.ens3"
+               port: 53
+               flags: "kind='dns'"
+             - addresses: "net.ens3"
+               port: 853
+               flags: "kind='tls'"
+          modules:
+           - name: 'hints > iterate'
+           - name: 'stats'
+           - name: 'predict'
+          cache:
+            size: '100 * MB'
+    
+      roles:
+        - knot-resolver
+
